@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>{{ user_msg.name }}</h1>
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+
+
+    <form action="{% url 'polls:user_msg_change' user_msg.id %}" method="post">
+
+        <input type="text" name="name" value="{{ user_msg.name }}" />
+        <input type="text" name="email" value="{{ user_msg.email }}" />
+        <input type="text" name="payment" value="{{ user_msg.payment }}" />
+        <br>
+        <input type="submit" value="user_msg" />
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>add user</h1>
+
+
+
+
+
+    <form action="{% url 'polls:user_msg_add'  %}" method="post">
+
+        <input type="text" name="name"  />
+        <input type="text" name="email"  />
+        <input type="text" name="payment"  />
+        <br>
+        <input type="submit" value="user_msg" />
+    </form>
+
+
+</body>
+</html>
